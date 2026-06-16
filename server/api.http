@@ -1,0 +1,68 @@
+@base_url=http://localhost:3000/api/v1
+
+### Get Welcome Message
+GET {{base_url}}
+
+
+### Check API Health
+GET  {{base_url}}/health
+
+
+### Admin Signup
+POST {{base_url}}/auth/signup
+Content-Type: application/json
+
+{
+  "name": "Alex Johnson",
+  "email": "alex@example.com",
+  "password": "StrongPassword123"
+}
+
+
+
+### 
+POST {{base_url}}/auth/login
+Content-Type: application/json
+
+{
+  "email": "alex@example.com",
+  "password": "StrongPassword123"
+}
+
+
+### 
+GET {{base_url}}/auth/profile
+
+
+### 
+POST {{base_url}}/auth/logout
+
+
+###
+GET {{base_url}}/links
+
+
+###
+POST {{base_url}}/links
+Content-Type: application/json
+
+{
+  "longUrl": "https://example.com/very-long-url"
+}
+
+
+### 
+PUT {{base_url}}/links/716f169f-c600-48d8-b3d9-fa67327844ff
+Content-Type: application/json
+
+{
+  "longUrl": "https://ui.shadcn.com/create?template=vite&pointer=true&base=base&preset=b37aQi"
+}
+
+
+###
+DELETE {{base_url}}/links/716f169f-c600-48d8-b3d9-fa67327844ff
+
+
+###
+GET {{base_url}}/links/fd38d162-0b12-4f6e-b496-949eb8f27e95/analytics

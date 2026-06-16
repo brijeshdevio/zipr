@@ -1,0 +1,5 @@
+allowBuilds:
+  '@prisma/engines': set this to true or false
+  argon2: false
+  prisma: set this to true or false
+  unrs-resolver: false

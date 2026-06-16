@@ -1,0 +1,37 @@
+generator client {
+  provider     = "prisma-client"
+  output       = "../src/generated/prisma"
+  moduleFormat = "cjs"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+
+model User {
+  id        String   @id @default(uuid())
+  email     String   @unique
+  name String
+  password  String   // hashed with bcrypt
+  links     Link[]
+  createdAt DateTime @default(now())
+}
+
+model Link {
+  id        String   @id @default(uuid())
+  longUrl   String
+  shortCode String   @unique
+  clicks    Int      @default(0)
+  userId    String
+  user      User     @relation(fields: [userId], references: [id])
+  createdAt DateTime @default(now())
+  clicksLog Click[]
+}
+
+model Click {
+  id        String   @id @default(uuid())
+  linkId    String
+  link      Link     @relation(fields: [linkId], references: [id])
+  createdAt DateTime @default(now())
+}
