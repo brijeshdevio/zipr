@@ -15,13 +15,11 @@ import {
   BarChart3,
   Calendar,
   Check,
-  Copy,
   Edit2,
   ExternalLink,
   Link2,
   LogOut,
   Plus,
-  Search,
   Trash2,
 } from "lucide-react";
 import { useEffect, useState } from "react";
@@ -96,15 +94,15 @@ export function Dashboard() {
     }
   };
 
-  const handleUpdateLink = async (id: string) => {
-    try {
-      await api.put(`/links/${id}`);
-      toast.success("Link updated successfully.");
-      await handleLoadLinks();
-    } catch (err: unknown) {
-      toast.error("Could not update link.");
-    }
-  };
+  // const handleUpdateLink = async (id: string) => {
+  //   try {
+  //     await api.put(`/links/${id}`);
+  //     toast.success("Link updated successfully.");
+  //     await handleLoadLinks();
+  //   } catch (err: unknown) {
+  //     toast.error("Could not update link.");
+  //   }
+  // };
 
   useEffect(() => {
     (async () => {

@@ -74,7 +74,7 @@ export function Analytics() {
 
   const getRelativeTime = (isoStr: string) => {
     try {
-      const ms = Date.now() - new Date(isoStr).getTime();
+      const ms = new Date().getTime() - new Date(isoStr).getTime();
       const seconds = Math.floor(ms / 1000);
       if (seconds < 5) return "Just now";
       if (seconds < 60) return `${seconds}s ago`;
@@ -275,22 +275,29 @@ export function Analytics() {
                     </TableCell>
                   </TableRow>
                 ) : (
-                  data.recentClicks.slice(0, 10).map((click, index) => (
-                    <TableRow
-                      key={click.id}
-                      className="border-border transition-colors hover:bg-muted/20"
-                    >
-                      <TableCell className="font-mono text-xs font-bold">
-                        #{data.recentClicks.length - index}
-                      </TableCell>
-                      <TableCell className="text-xs font-semibold text-foreground">
-                        {getRelativeTime(click.createdAt)}
-                      </TableCell>
-                      <TableCell className="text-right text-xs font-medium text-muted-foreground">
-                        {formatDatePrecise(click.createdAt)}
-                      </TableCell>
-                    </TableRow>
-                  ))
+                  data.recentClicks
+                    .slice(0, 10)
+                    .map(
+                      (
+                        click: { id: string; createdAt: string },
+                        index: number
+                      ) => (
+                        <TableRow
+                          key={click.id}
+                          className="border-border transition-colors hover:bg-muted/20"
+                        >
+                          <TableCell className="font-mono text-xs font-bold">
+                            #{data.recentClicks.length - index}
+                          </TableCell>
+                          <TableCell className="text-xs font-semibold text-foreground">
+                            {getRelativeTime(click.createdAt)}
+                          </TableCell>
+                          <TableCell className="text-right text-xs font-medium text-muted-foreground">
+                            {formatDatePrecise(click.createdAt)}
+                          </TableCell>
+                        </TableRow>
+                      )
+                    )
                 )}
               </TableBody>
             </Table>
