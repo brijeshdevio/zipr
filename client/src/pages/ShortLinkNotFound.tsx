@@ -97,8 +97,8 @@ export function ShortLinkNotFound() {
 
       <span className="text-center text-[11px] text-muted-foreground">
         Powered by{" "}
-        <strong className="font-semibold text-foreground">ShortTrack</strong>{" "}
-        secure linking engine
+        <strong className="font-semibold text-foreground">Zipr</strong> secure
+        linking engine
       </span>
     </div>
   );

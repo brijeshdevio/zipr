@@ -120,7 +120,7 @@ export function Analytics() {
         <div className="mx-auto flex h-14 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
           <div className="flex items-center gap-2">
             <Link2 className="size-5 shrink-0 text-primary" />
-            <span className="text-lg font-bold tracking-tight">ShortTrack</span>
+            <span className="text-lg font-bold tracking-tight">Zipr</span>
           </div>
 
           <Button

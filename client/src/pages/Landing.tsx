@@ -37,7 +37,7 @@ export function Landing() {
             <Link to="/" className="flex items-center gap-2">
               <Link2 className="size-5 shrink-0 text-primary" />
               <span className="text-lg font-extrabold tracking-tight">
-                ShortTrack
+                Zipr
               </span>
             </Link>
             <nav className="hidden items-center gap-6 text-sm font-medium text-muted-foreground md:flex">
@@ -132,8 +132,8 @@ export function Landing() {
               <span className="text-primary">Instant Audience Analytics.</span>
             </h1>
             <p className="mx-auto max-w-2xl text-base leading-relaxed text-muted-foreground sm:text-lg md:text-xl">
-              ShortTrack empowers you to secure, shorten, track, and optimize
-              every link you share. Transform bulky URLs into high-performing
+              Zipr empowers you to secure, shorten, track, and optimize every
+              link you share. Transform bulky URLs into high-performing
               promotional assets with real-time analytics.
             </p>
           </div>
@@ -168,7 +168,7 @@ export function Landing() {
                 <div className="size-2 rounded-full bg-accent-foreground/20" />
                 <div className="size-2 rounded-full bg-primary/20" />
                 <span className="ml-4 font-mono text-[10px] text-muted-foreground select-none">
-                  shorttrack.io/dashboard
+                  zipr.io/dashboard
                 </span>
               </div>
               <div className="space-y-6 rounded-b-lg bg-background/50 p-4 text-left sm:p-6">
@@ -430,7 +430,7 @@ export function Landing() {
           <div className="flex items-center gap-2">
             <Link2 className="size-4 shrink-0 text-primary" />
             <span className="font-extrabold tracking-tight text-foreground">
-              ShortTrack
+              Zipr
             </span>
             <span className="text-muted-foreground">
               | secure URL shortener engine.
@@ -439,7 +439,7 @@ export function Landing() {
 
           <div className="flex items-center gap-6">
             <span>
-              &copy; {new Date().getFullYear()} ShortTrack. All rights reserved.
+              &copy; {new Date().getFullYear()} Zipr. All rights reserved.
             </span>
             <a
               href="#features"
